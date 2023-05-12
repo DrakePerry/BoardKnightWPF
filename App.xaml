@@ -1,0 +1,28 @@
+﻿<Application x:Class="BoardKnightWPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BoardKnightWPF"
+             xmlns:view="clr-namespace:BoardKnightWPF.View"
+             xmlns:viewModel="clr-namespace:BoardKnightWPF.ViewModel">
+    
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type TypeName=viewModel:HomeViewModel}">
+            <view:HomeView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type TypeName=viewModel:ManagePlayersViewModel}">
+            <view:ManagePlayersView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type TypeName=viewModel:StartBracketViewModel}">
+            <view:StartBracketView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type TypeName=viewModel:MainViewModel}">
+            <view:MainWindow/>
+        </DataTemplate>
+
+
+    </Application.Resources>
+
+</Application>
